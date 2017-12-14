@@ -3,10 +3,11 @@
 -> open camera
 -> takes picture
 -> tell battery status
--> tell date an d hour 
+-> tell date and hour 
 -> tells weather from internet
-TO DO 
-	-> number of inbox mails
-	-> inbox and outbox mails
-	-> open youtube and play certain song
+-> inbox and outbox mails
+-> open youtube and play certain song
+TO DO
+	->still have errors for weather and youtube => need to parse command
+	->get currency
 	

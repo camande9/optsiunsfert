@@ -26,9 +26,9 @@ public class VoiceLauncher {
         // Set path to the acoustic model.
         configuration.setAcousticModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us");
         // Set path to the dictionary.
-        configuration.setDictionaryPath("/home/puffy/eclipse-workspace/Iris/src/1702.dic");
+        configuration.setDictionaryPath("/home/darius/Facultate/mps/optsiunsfert/Iris/src/1702.dic");
         // Set path to the language model.
-        configuration.setLanguageModelPath("/home/puffy/eclipse-workspace/Iris/src/1702.lm");
+        configuration.setLanguageModelPath("/home/darius/Facultate/mps/optsiunsfert/Iris/src/1702.lm");
         Logger cmRootLogger = Logger.getLogger("default.config");
         cmRootLogger.setLevel(java.util.logging.Level.OFF);
         String conFile = System.getProperty("java.util.logging.config.file");
@@ -49,16 +49,16 @@ public class VoiceLauncher {
     	List<String>  interval = Arrays.asList("one","two","three","four","five","six","seven","eight","nine","ten");
     	List<String>  cities = Arrays.asList("Tirana","Andorra","Yerevan","Vienna","Baku","Minsk","Brussels","Sofia","Zagreb","Nicosia","Republic","Copenhagen","Tallinn","Helsinki","Paris","Tbilisi","Berlin","Athens","Budapest","Reykjavik","Dublin","Rome","Astana","Pristina","Capital","Riga","Vaduz","Vilnius","Luxembourg","Skopje","Valletta","Chisinau","Monaco","Podgorica","Amsterdam","Oslo","Warsaw","Lisbon","Bucharest","Moscow","Marino","Belgrade","Bratislava","Ljubljana","Madrid","Stockholm","Bern","Ankara","Kiev","London","Vatican");
     	
-    	playlist.add("firefox \"https://www.youtube.com/watch?v=25wovUAb8rU&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=1\"");
-    	playlist.add("firefox \"https://www.youtube.com/watch?v=UHvGpxOMN6U&index=2&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ\"");
-    	playlist.add("firefox \"https://www.youtube.com/watch?v=GnHMp8WIg1Q&index=3&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ\"");
-    	playlist.add("firefox \"https://www.youtube.com/watch?v=3tUh-x-fp8Q&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=4\"");
-    	playlist.add("firefox \"https://www.youtube.com/watch?v=n0l0YOHO5jg&index=5&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ\"");
-    	playlist.add("firefox \"https://www.youtube.com/watch?v=ZXorliBQMxg&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=6\"");
-    	playlist.add("firefox \"https://www.youtube.com/watch?v=tKJrbUaUmfs&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=7\"");
-    	playlist.add("firefox \"https://www.youtube.com/watch?v=JPp-oLkQPQQ&index=8&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ\"");
-    	playlist.add("firefox \"https://www.youtube.com/watch?v=J_QGZspO4gg&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=9\"");
-    	playlist.add("firefox \"https://www.youtube.com/watch?v=IEvEbTqaW1Y&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=10\"");
+    	playlist.add("google-chrome \"https://www.youtube.com/watch?v=25wovUAb8rU&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=1\"");
+    	playlist.add("google-chrome \"https://www.youtube.com/watch?v=UHvGpxOMN6U&index=2&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ\"");
+    	playlist.add("google-chrome \"https://www.youtube.com/watch?v=GnHMp8WIg1Q&index=3&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ\"");
+    	playlist.add("google-chrome \"https://www.youtube.com/watch?v=3tUh-x-fp8Q&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=4\"");
+    	playlist.add("google-chrome \"https://www.youtube.com/watch?v=n0l0YOHO5jg&index=5&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ\"");
+    	playlist.add("google-chrome \"https://www.youtube.com/watch?v=ZXorliBQMxg&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=6\"");
+    	playlist.add("google-chrome \"https://www.youtube.com/watch?v=tKJrbUaUmfs&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=7\"");
+    	playlist.add("google-chrome \"https://www.youtube.com/watch?v=JPp-oLkQPQQ&index=8&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ\"");
+    	playlist.add("google-chrome \"https://www.youtube.com/watch?v=J_QGZspO4gg&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=9\"");
+    	playlist.add("google-chrome \"https://www.youtube.com/watch?v=IEvEbTqaW1Y&list=PL2lX82lL7yCcTb-ue24Ci_bqndSfYKRjZ&index=10\"");
         //Check if recognizer recognized the speech
     	
         while ((result = recognize.getResult()) != null) {
@@ -76,11 +76,11 @@ public class VoiceLauncher {
             	System.out.println("close nautilus");
                 work = "pkill nautilus";
             } else if (command.equalsIgnoreCase("open browser")) {
-            	System.out.println("open firefox");
-                work = "firefox";
+            	System.out.println("OPEN Google Chrome");
+                work = "google-chrome";
             } else if (command.equalsIgnoreCase("close browser")) {
-            	System.out.println("close firefox");
-                work = "pkill firefox";
+            	System.out.println("CLOSE Google Chrome");
+                work = "pkill chrome";
             } else if (command.equalsIgnoreCase("get battery status")) {
             	work = "upower -i $(upower -e | grep 'BAT') | grep -E \"state|to\\ full|percentage\"";
             } else if (command.equalsIgnoreCase("connection")) {
@@ -89,14 +89,19 @@ public class VoiceLauncher {
             	work = "gnome-calculator";
             } else if (command.equalsIgnoreCase("calendar")) {
             	work = "gnome-calendar";
-            }else if (command.equalsIgnoreCase("game")) {
+            } else if (command.equalsIgnoreCase("game")) {
             	work = "sol";
-            }else if (command.equalsIgnoreCase("picture")) {
+            } else if (command.equalsIgnoreCase("picture")) {
             	work = "cheese";
             } else if (command.equalsIgnoreCase("take picture")) {
             	work = " streamer -c /dev/video0 -b 16 -o outfile.jpeg";
             } else if (command.toLowerCase().startsWith("weather")) {
-            	work = "./src/weather.sh 1 ".concat(command.substring(8,command.length()).trim().toLowerCase());
+            	if (command.toLowerCase().equals("weather")) {
+            		System.out.println("Please specify the city");
+            	} else {
+            		System.out.println();
+            		work = "./src/weather.sh 1 ".concat(command.substring(8,command.length()).trim().toLowerCase());
+            	}
             } else if (command.equalsIgnoreCase("say time")) {
             	work =  "./src/weather.sh 2";
             } else if (command.equalsIgnoreCase("get inbox")) {
@@ -108,11 +113,29 @@ public class VoiceLauncher {
             } else if (command.toLowerCase().startsWith("song number")) {
                 System.out.println(command.substring(12, command.length()).trim());
                 System.out.println(interval.indexOf(command.substring(12, command.length()).trim().toLowerCase()));
-            	work=playlist.get(interval.indexOf(command.substring(12, command.length()).trim().toLowerCase()));
-               
-            	
-            } 
-            else {
+            	work=playlist.get(interval.indexOf(command.substring(12, command.length()).trim().toLowerCase()));     	
+            } else if (command.equalsIgnoreCase("open music player")) {
+            	System.out.println("OPEN Music Player");
+            	work = "rhythmbox";
+            } else if (command.equalsIgnoreCase("close music player")) {
+            	System.out.println("CLOSE Music Player");
+            	work = "pkill rhythmbox";
+            } else if (command.equalsIgnoreCase("open image viewer")) {
+            	System.out.println("open image viewer");
+            	work = "eog ~/Facultate/mps/optsiunsfert/image";
+            } else if (command.equalsIgnoreCase("close image viewer")) {
+            	System.out.println("CLOSE Image Viewer");
+            	work = "pkill eog";
+            } else if (command.equalsIgnoreCase("get facebook friends")) {
+            	work = "facebook-cli login > /dev/null; google-chrome \"https://www.facebook.com/dialog/oauth?client_id=1951356988460279&redirect_uri=http://localhost:3333/&scope=user_likes,user_friends,user_posts,user_photos,user_videos,user_events,publish_actions\";pkill chrome; facebook-cli friends";
+            	System.out.println("Please wait...");
+            } else if (command.equalsIgnoreCase("get my facebook photos")) {
+            	work = "facebook-cli login > /dev/null; google-chrome \"https://www.facebook.com/dialog/oauth?client_id=1951356988460279&redirect_uri=http://localhost:3333/&scope=user_likes,user_friends,user_posts,user_photos,user_videos,user_events,publish_actions\";pkill chrome; facebook-cli photos";
+            	System.out.println("Please wait...");
+            } else if (command.equalsIgnoreCase("get my facebook details")) {
+            	work = "facebook-cli login > /dev/null; google-chrome \"https://www.facebook.com/dialog/oauth?client_id=1951356988460279&redirect_uri=http://localhost:3333/&scope=user_likes,user_friends,user_posts,user_photos,user_videos,user_events,publish_actions\";pkill chrome; facebook-cli me";
+            	System.out.println("Please wait...");
+            } else {
             	System.out.println(command);
             }
             	
@@ -132,7 +155,7 @@ public class VoiceLauncher {
                 StringBuilder stdout = commandExecutor.getStandardOutputFromCommand();
                 StringBuilder stderr = commandExecutor.getStandardErrorFromCommand();
 
-                System.out.println("STDOUT");
+//                System.out.println("STDOUT");
                 System.out.println(stdout);
                 if(cmd == 2){
                 	String s = stdout.toString();
@@ -141,9 +164,8 @@ public class VoiceLauncher {
                 	System.out.println(ip);
                 	
                 }
-
-                System.out.println("STDERR");
-                System.out.println(stderr);
+//                System.out.println("STDERR");
+//                System.out.println(stderr);
             }
         
         }
