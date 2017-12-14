@@ -9,7 +9,7 @@ if [ $1 -eq '1' ];then
 	
 fi
 if [ $1 -eq '2' ];then
-	date +"%d-%m-%Y %H:%m"
+	date +"%d-%m-%Y %H:%M:%S"
 fi
 if [ $1 -eq '3' ];then
 	  IP=$(ifconfig | grep "inet addr:" | grep -v 127.0.0.1 | sed -e 's/Bcast//' | cut -d: -f2)

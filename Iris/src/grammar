@@ -1,5 +1,10 @@
     open file manager
+    open music player
+    close music player
+    open image viewer
+    close image viewer
     start file manager
+    open music 	
     open browser
     start browser
     close browser
@@ -76,5 +81,4 @@
 	Ankara
 	Kiev
 	London
-	Vatican
-		
+	Vatican		

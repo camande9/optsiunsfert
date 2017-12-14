@@ -26,9 +26,9 @@ public class VoiceLauncher {
         // Set path to the acoustic model.
         configuration.setAcousticModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us");
         // Set path to the dictionary.
-        configuration.setDictionaryPath("/home/puffy/eclipse-workspace/Iris/src/1702.dic");
+        configuration.setDictionaryPath("/home/darius/Facultate/mps/optsiunsfert/Iris/src/1702.dic");
         // Set path to the language model.
-        configuration.setLanguageModelPath("/home/puffy/eclipse-workspace/Iris/src/1702.lm");
+        configuration.setLanguageModelPath("/home/darius/Facultate/mps/optsiunsfert/Iris/src/1702.lm");
         Logger cmRootLogger = Logger.getLogger("default.config");
         cmRootLogger.setLevel(java.util.logging.Level.OFF);
         String conFile = System.getProperty("java.util.logging.config.file");
@@ -108,12 +108,22 @@ public class VoiceLauncher {
             } else if (command.toLowerCase().startsWith("song number")) {
                 System.out.println(command.substring(12, command.length()).trim());
                 System.out.println(interval.indexOf(command.substring(12, command.length()).trim().toLowerCase()));
-            	work=playlist.get(interval.indexOf(command.substring(12, command.length()).trim().toLowerCase()));
-               
-            	
-            } 
+            	work=playlist.get(interval.indexOf(command.substring(12, command.length()).trim().toLowerCase()));     	
+            } else if (command.equalsIgnoreCase("open music player")) {
+            	System.out.println("open music player");
+            	work = "rhythmbox";
+            } else if (command.equalsIgnoreCase("close music player")) {
+            	System.out.println("close music player");
+            	work = "pkill rhythmbox";
+            } else if (command.equalsIgnoreCase("open image viewer")) {
+            	System.out.println("open image viewer");
+            	work = "eog ~/Facultate/mps/optsiunsfert/image";
+            } else if (command.equalsIgnoreCase("close image viewer")) {
+            	System.out.println("close image viewer");
+            	work = "pkill eog";
+            }
             else {
-            	System.out.println(command);
+            	System.out.println("Sorry, I don't understand");
             }
             	
             //In case command recognized is none of the above hence work might be null
