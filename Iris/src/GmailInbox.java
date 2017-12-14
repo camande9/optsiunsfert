@@ -22,7 +22,7 @@ public class GmailInbox {
         Properties props = new Properties();
  
         try {
-            props.load(new FileInputStream(new File("/home/puffy/eclipse-workspace/Iris/src/smtp.properties")));
+            props.load(new FileInputStream(new File("/home/darius/Facultate/mps/optsiunsfert/Iris/src/smtp.properties")));
             Session session = Session.getDefaultInstance(props, null);
  
             Store store = session.getStore("imaps");
