@@ -65,7 +65,6 @@ public class VoiceLauncher {
         	 
             //Get the recognized speech
             String command = result.getHypothesis();
-            System.out.println(command);
             String work = null;
             Process p;
  
@@ -100,7 +99,8 @@ public class VoiceLauncher {
             		System.out.println("Please specify the city");
             	} else {
             		System.out.println();
-            		work = "./src/weather.sh 1 ".concat(command.substring(8,command.length()).trim().toLowerCase());
+            		work = "./src/we//            System.out.println(command);\n" + 
+            				"ather.sh 1 ".concat(command.substring(8,command.length()).trim().toLowerCase());
             	}
             } else if (command.equalsIgnoreCase("say time")) {
             	work =  "./src/weather.sh 2";
@@ -109,10 +109,8 @@ public class VoiceLauncher {
             	GmailInbox mail=new GmailInbox();
             	System.out.println("Inbox Email Works");
             	mail.read();
-            	
             } else if (command.toLowerCase().startsWith("song number")) {
                 System.out.println(command.substring(12, command.length()).trim());
-                System.out.println(interval.indexOf(command.substring(12, command.length()).trim().toLowerCase()));
             	work=playlist.get(interval.indexOf(command.substring(12, command.length()).trim().toLowerCase()));     	
             } else if (command.equalsIgnoreCase("open music player")) {
             	System.out.println("OPEN Music Player");
@@ -121,7 +119,7 @@ public class VoiceLauncher {
             	System.out.println("CLOSE Music Player");
             	work = "pkill rhythmbox";
             } else if (command.equalsIgnoreCase("open image viewer")) {
-            	System.out.println("open image viewer");
+            	System.out.println("Open Image Viewer");
             	work = "eog ~/Facultate/mps/optsiunsfert/image";
             } else if (command.equalsIgnoreCase("close image viewer")) {
             	System.out.println("CLOSE Image Viewer");
@@ -135,8 +133,6 @@ public class VoiceLauncher {
             } else if (command.equalsIgnoreCase("get my facebook details")) {
             	work = "facebook-cli login > /dev/null; google-chrome \"https://www.facebook.com/dialog/oauth?client_id=1951356988460279&redirect_uri=http://localhost:3333/&scope=user_likes,user_friends,user_posts,user_photos,user_videos,user_events,publish_actions\";pkill chrome; facebook-cli me";
             	System.out.println("Please wait...");
-            } else {
-            	System.out.println(command);
             }
             	
             //In case command recognized is none of the above hence work might be null
@@ -155,7 +151,6 @@ public class VoiceLauncher {
                 StringBuilder stdout = commandExecutor.getStandardOutputFromCommand();
                 StringBuilder stderr = commandExecutor.getStandardErrorFromCommand();
 
-//                System.out.println("STDOUT");
                 System.out.println(stdout);
                 if(cmd == 2){
                 	String s = stdout.toString();
@@ -164,6 +159,7 @@ public class VoiceLauncher {
                 	System.out.println(ip);
                 	
                 }
+                work = null;
 //                System.out.println("STDERR");
 //                System.out.println(stderr);
             }
