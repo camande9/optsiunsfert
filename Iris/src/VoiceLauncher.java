@@ -69,10 +69,10 @@ public class VoiceLauncher {
             Process p;
  
             if(command.equalsIgnoreCase("open file manager")) {
-            	System.out.println("nautilus");
+            	System.out.println("Open File Manager");
                 work = "nautilus";
             } else if (command.equalsIgnoreCase("close file manager")) {
-            	System.out.println("close nautilus");
+            	System.out.println("Close File Manager");
                 work = "pkill nautilus";
             } else if (command.equalsIgnoreCase("open browser")) {
             	System.out.println("OPEN Google Chrome");
